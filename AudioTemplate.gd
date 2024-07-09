@@ -15,3 +15,4 @@ func _on_timer_timeout():
 	# Remove este nó da cena
 	queue_free()
 
+#Teste
