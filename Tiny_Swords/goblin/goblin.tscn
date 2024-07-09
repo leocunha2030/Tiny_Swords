@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://blikam57qc7lq"]
+[gd_scene load_steps=18 format=3 uid="uid://blikam57qc7lq"]
 
 [ext_resource type="Script" path="res://Tiny_Swords/goblin/goblin.gd" id="1_ilqtm"]
 [ext_resource type="Texture2D" uid="uid://dygyr15na4qrn" path="res://Assets/factions/goblin/torch_goblin.png" id="1_p57h0"]
@@ -391,7 +391,20 @@ _data = {
 "hit": SubResource("Animation_qfim6")
 }
 
+[sub_resource type="Gradient" id="Gradient_sgg1u"]
+offsets = PackedFloat32Array(0, 0.688406)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4txt0"]
+gradient = SubResource("Gradient_sgg1u")
+width = 125
+height = 125
+fill = 1
+fill_from = Vector2(0.485149, 0.514852)
+repeat = 1
+
 [node name="goblin" type="CharacterBody2D"]
+position = Vector2(500, 500)
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_ilqtm")
@@ -412,9 +425,6 @@ texture = ExtResource("1_p57h0")
 hframes = 7
 vframes = 3
 
-[node name="PointLight2D" type="PointLight2D" parent="Texture"]
-energy = 6.75
-
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_dl4j4")
@@ -429,6 +439,12 @@ libraries = {
 show_behind_parent = true
 position = Vector2(0, 29)
 emitting = false
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-32, -20)
+color = Color(0.843137, 0.694118, 0.176471, 1)
+energy = 0.7
+texture = SubResource("GradientTexture2D_4txt0")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bxu7llbrtynyu"]
+[gd_scene load_steps=18 format=3 uid="uid://bxu7llbrtynyu"]
 
 [ext_resource type="Texture2D" uid="uid://dyx1yol1g1vlu" path="res://Assets/factions/knight/warrior.png" id="1_pun2n"]
 [ext_resource type="Script" path="res://Tiny_Swords/Knight/knight.gd" id="1_ymt3n"]
@@ -378,6 +378,17 @@ _data = {
 "hit": SubResource("Animation_hobs0")
 }
 
+[sub_resource type="Gradient" id="Gradient_i267c"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0uohc"]
+gradient = SubResource("Gradient_i267c")
+width = 280
+height = 280
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.811881, 0.138614)
+
 [node name="Knight" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_ymt3n")
@@ -419,6 +430,11 @@ position_smoothing_enabled = true
 show_behind_parent = true
 position = Vector2(0, 31)
 emitting = false
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.843137, 0.694118, 0.176471, 1)
+energy = 0.3
+texture = SubResource("GradientTexture2D_0uohc")
 
 [connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

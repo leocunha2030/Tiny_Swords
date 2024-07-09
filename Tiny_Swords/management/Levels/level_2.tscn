@@ -29,3 +29,7 @@ position = Vector2(1417, 630)
 
 [node name="goblin3" parent="." index="8"]
 position = Vector2(1125, 53)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="10"]
+energy = 0.8
+blend_mode = 1
