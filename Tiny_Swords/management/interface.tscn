@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw7mm3oq22srg"]
+
+[ext_resource type="FontFile" uid="uid://cdxs37fuqqqyg" path="res://Tiny_Swords/management/kurland.ttf" id="1_5sx3q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_85bh1"]
+font = ExtResource("1_5sx3q")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.745098)
+shadow_offset = Vector2(2, 2)
+
+[node name="Interface" type="CanvasLayer"]
+
+[node name="Health" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.933
+anchor_top = 0.877
+anchor_right = 0.933
+anchor_bottom = 0.877
+offset_left = -44.816
+offset_top = -17.296
+offset_right = 45.184
+offset_bottom = 16.704
+grow_horizontal = 0
+grow_vertical = 2
+text = "Hp: 10"
+label_settings = SubResource("LabelSettings_85bh1")
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.933
+anchor_top = 0.877
+anchor_right = 0.933
+anchor_bottom = 0.877
+offset_left = -105.816
+offset_top = -541.296
+offset_right = 50.184
+offset_bottom = -507.296
+grow_horizontal = 0
+grow_vertical = 2
+text = "Score: 0000
+"
+label_settings = SubResource("LabelSettings_85bh1")
+vertical_alignment = 1

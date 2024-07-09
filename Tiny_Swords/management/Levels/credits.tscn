@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://c67f5mn8k8nxn"]
+
+[ext_resource type="Script" path="res://Tiny_Swords/management/Levels/credits.gd" id="1_7r5n6"]
+[ext_resource type="FontFile" uid="uid://cdxs37fuqqqyg" path="res://Tiny_Swords/management/kurland.ttf" id="1_mwksy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ujals"]
+font = ExtResource("1_mwksy")
+font_size = 64
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7r5n6")
+
+[node name="BackGround" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="BackGround"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -34.0
+offset_right = 213.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Thanks for Playing!"
+label_settings = SubResource("LabelSettings_ujals")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="Button" parent="BackGround" groups=["button"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507
+anchor_top = 0.647
+anchor_right = 0.507
+anchor_bottom = 0.647
+offset_left = -199.064
+offset_top = -21.256
+offset_right = 197.936
+offset_bottom = 20.744
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_mwksy")
+theme_override_font_sizes/font_size = 32
+text = "Back to Main Menu
+"
+
+[node name="Quit" type="Button" parent="BackGround" groups=["button"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507
+anchor_top = 0.647
+anchor_right = 0.507
+anchor_bottom = 0.647
+offset_left = -197.064
+offset_top = 44.744
+offset_right = 199.936
+offset_bottom = 86.744
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_mwksy")
+theme_override_font_sizes/font_size = 32
+text = "Quit
+"

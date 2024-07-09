@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://edbr3opbu5ft"]
+
+[ext_resource type="Texture2D" uid="uid://0jowt3awur78" path="res://Assets/terrain/decoration/water_rock.png" id="1_8x06k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5r3c"]
+atlas = ExtResource("1_8x06k")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1bb0"]
+atlas = ExtResource("1_8x06k")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ike7v"]
+atlas = ExtResource("1_8x06k")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q71fl"]
+atlas = ExtResource("1_8x06k")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otwys"]
+atlas = ExtResource("1_8x06k")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8ekw"]
+atlas = ExtResource("1_8x06k")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7bpf"]
+atlas = ExtResource("1_8x06k")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g13po"]
+atlas = ExtResource("1_8x06k")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ktp6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5r3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1bb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ike7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q71fl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otwys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8ekw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7bpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g13po")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="WaterRocks" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_3ktp6")
+autoplay = "default"
+frame_progress = 0.97038
